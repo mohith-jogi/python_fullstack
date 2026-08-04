@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="css/style.css">
-    <title>Trainers page</title>
+    <link rel="stylesheet" href="{{url_for ('static',filename='css/static/css')}}">
+    <title>About Page</title>
 </head>
 
 <body>
     <header>
-        Home <br>
-        <h1>Trainers in NRIIT Learning Management</h1>
+        <h1>About NRIIT Learning Management</h1>
         <p>Learn Practice Get Placed</p>
         <nav>
             <a href="index.html">Home</a>
@@ -25,14 +24,16 @@
     </header>
     <main>
         <section>
-            <h2>Meet Our Trainers</h2>
-            <article>
-                <img src="images/trainer1.jpg" alt="Python Trainer" width="180">
-                class="Trainer-imange"
-                <h3>Mr. Sriram</h3>
-                <p>Python Full Stack Trainer</p>
-                <p>Experience: 4+ years</p>
-            </article>
+            <h2>About NRIIT</h2>
+            <p>
+                NRIIT is committed to providing quality education in Python FullStack.
+            </p>
+        </section>
+        <section>
+            <h2>Vision</h2>
+            <p>
+                Empowering Students with Practical Software Skills
+            </p>
         </section>
     </main>
     <footer>
@@ -54,7 +55,7 @@
         <a href="#">LinkedIn</a>
 
     </footer>
-
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
 </body>
 
 </html>
