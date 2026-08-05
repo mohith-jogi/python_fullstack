@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="{{url_for ('static',filename='css/static/css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
     <title>Trainers page</title>
 </head>
 
@@ -14,21 +14,20 @@
         <h1>Trainers in NRIIT Learning Management</h1>
         <p>Learn Practice Get Placed</p>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="courses.html">Courses</a>
-            <a href="trainers.html">Trainers</a>
-            <a href="register.html">Register</a>
-            <a href="login.html">Login</a>
-            <a href="contact.html">Contact</a>
+           <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/courses">Courses</a>
+            <a href="/trainers">Trainers</a>
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+            <a href="/contact">Contact</a
         </nav>
     </header>
     <main>
         <section>
             <h2>Meet Our Trainers</h2>
             <article>
-                <img src="images/trainer1.jpg" alt="Python Trainer" width="180">
-                class="Trainer-imange"
+                <img src="images/trainer1.jpg" alt="Python Trainer" width="180" class="trainer-image">
                 <h3>Mr. Sriram</h3>
                 <p>Python Full Stack Trainer</p>
                 <p>Experience: 4+ years</p>
@@ -55,7 +54,6 @@
 
     </footer>
     <script src="{{url_for('static',filename='js/script.js')}}"></script>
-
 </body>
 
 </html>

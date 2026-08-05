@@ -4,20 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for ('static',filename='css/static/css')}}">
-    <title>Login Page</title>
+<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">    <title>Login Page</title>
 </head>
 
 <body>
     <header>Login</header>
     <main>
         <h2>Student Login</h2>
-        <form>
+        <form id="LoginForm">
             <label>Email</label><br>
-            <input type="email" placeholder="Enter your Email"><br>
+            <input type="email" placeholder="Enter your Email" id="loginemail"><br>
             <label>Password</label><br>
-            <input type="password" placeholder="Enter Your Password"> <br>
-            <input type="submit" value="Login">
+            <input type="password" placeholder="Enter Your Password" id="loginpassword"> <br>
+            <button type="submit" value="Login"></button>
 
         </form>
     </main>
@@ -40,7 +39,7 @@
         <a href="#">LinkedIn</a>
 
     </footer>
-    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+      <script src="{{url_for('static',filename='js/script.js')}}"></script>
 </body>
 
 </html>
