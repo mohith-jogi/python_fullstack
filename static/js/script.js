@@ -1,3 +1,4 @@
+
 // Register form validation & API call
 let registerForm = document.getElementById("registerForm");
 if (registerForm) {
