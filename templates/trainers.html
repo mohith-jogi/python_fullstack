@@ -15,12 +15,16 @@
     <p>Learn Practice Get Placed</p>
     <nav>
       <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/courses">Courses</a>
-      <a href="/trainers">Trainers</a>
-      <a href="/register">Register</a>
-      <a href="/login">Login</a>
-      <a href="/contact">Contact</a>
+            <a href="/about">About</a>
+            <a href="/courses">Courses</a>
+            <a href="/trainers">Trainers</a>
+            {% if session.grt('user_email') %}
+            <a href="/logout">Logout</a>
+            {% else %}
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+            {% endif %}
+            <a href="/contact">Contact</a
     </nav>
   </header>
   <main>

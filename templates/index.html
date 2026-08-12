@@ -18,8 +18,12 @@
             <a href="/about">About</a>
             <a href="/courses">Courses</a>
             <a href="/trainers">Trainers</a>
+            {% if session.grt('user_email') %}
+            <a href="/logout">Logout</a>
+            {% else %}
             <a href="/register">Register</a>
             <a href="/login">Login</a>
+            {% endif %}
             <a href="/contact">Contact</a
     </nav>
   </header>
@@ -31,7 +35,7 @@
         track their learning journey.
       </p>
       <p id="message">Learning never stops</p>
-      <img src="image/banner.jpg" alt="LMS Banner" width="800" class="banner">
+      <img src="static/image/banner.jpg" alt="LMS Banner" width="800" class="banner">
       <br><br>
       <button onclick="showmessage()">Click Me</button>
       <button onclick="changeHeading()">Change Heading</button>
