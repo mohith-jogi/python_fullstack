@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>Task Page</title>
+</head>
+
+<body>
+    <header>
+        Home <br>
+        <h1>NRIIT Learning Management</h1>
+        <p>Learn Practice Get Placed</p>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/courses">Courses</a>
+            <a href="/trainers">Trainers</a>
+            {% if session.get('user_email') %}
+            <a href="/tasks">My Tasks</a>
+            <a href="/logout">Logout</a>
+            {% else %}
+            <a href="/register">Register</a>
+            <a href="/login">Login</a>
+            {% endif %}
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <p>Welcome {{session.get('user_name')}}</p>
+            <h2>Here are your tasks</h2>
+            <h4>Manage your tasks here</h4>          
+            <ul id="taskList"></ul>
+        </section>
+        <section>
+            <h3>Add tasks</h3>
+            <form id="addTaskForm" action="/api/tasks" method="post">
+                <label for="taskTitle">Task Title:</label>
+                <input type="text" id="taskTitle" name="taskTitle" required>
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+            
+    </main>
+
+    <footer>
+
+        <hr>
+
+        <p>&copy; 2026 NRIIT Learning Management System</p>
+
+        <p>Email: info@nriit.edu</p>
+
+        <p>Phone: +91 9876543210</p>
+
+        <p>Follow Us:</p>
+
+        <a href="#">Facebook</a> |
+
+        <a href="#">Instagram</a> |
+
+        <a href="#">LinkedIn</a>
+
+    </footer>
+    <script src="{{url_for('static',filename='js/script.js')}}"></script>
+</body>
+
+</html>
