@@ -1,79 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Course page</title>
-<link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <title>Trainers page</title>
 </head>
 
 <body>
-  <header>
-    Home <br />
-    <h1>Courses in NRIIT Learning Management</h1>
-    <p>Learn Practice Get Placed</p>
-    <nav>
-      <a href="/">Home</a>
+    <header>
+        Home <br>
+        <h1>Trainers in NRIIT Learning Management</h1>
+        <p>Learn Practice Get Placed</p>
+        <nav>
+            <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/courses">Courses</a>
             <a href="/trainers">Trainers</a>
-            {% if session.grt('user_email') %}
+            {% if session.get('user_email') %}
+            <a href="/tasks">My Tasks</a>
             <a href="/logout">Logout</a>
             {% else %}
             <a href="/register">Register</a>
             <a href="/login">Login</a>
             {% endif %}
-            <a href="/contact">Contact</a
-    </nav>
-  </header>
-  <main>
-    <h2>Courses Offered</h2>
-    <table border="|" cellpadding="10">
-      <tr>
-        <th>Course</th>
-        <th>Duration</th>
-        <th>Mode</th>
-      </tr>
-      <tr>
-        <td id="courseName">Python FullStack</td>
-        <td id="courseDuration">6 Months</td>
-        <td id="courseMode">Offline</td>
-      </tr>
-    </table>
-    <br>
-    <button id="nextCourseBtn">Next Course</button>
-    <button id="applyCourseBtn">Apply Now</button>
-    <section>
-      <h2>Learning Path</h2>
-      <ol id="courseLearningPath">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Flask</li>
-        <li>Database</li>
-      </ol>
-    </section>
-  </main>
-  <footer>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Meet Our Trainers</h2>
+            <article>
+                <img id="trainerImg" src="{{ url_for('static', filename='images/trainer1.jpg') }}" alt="Trainer" width="180" class="trainer-image">
+                <h3 id="trainerName">Mr. Sriram</h3>
+                <p id="trainerRole">Python Full Stack Trainer</p>
+                <p id="trainerExp">Experience: 4+ years</p>
+            </article>
+            <br>
+            <button id="nextTrainerBtn">Next Trainer</button>
+        </section>
+    </main>
+    <footer>
 
-    <hr>
+        <hr>
 
-    <p>&copy; 2026 NRIIT Learning Management System</p>
+        <p>&copy; 2026 NRIIT Learning Management System</p>
 
-    <p>Email: info@nriit.edu</p>
+        <p>Email: info@nriit.edu</p>
 
-    <p>Phone: +91 9876543210</p>
+        <p>Phone: +91 9876543210</p>
 
-    <p>Follow Us:</p>
+        <p>Follow Us:</p>
 
-    <a href="#">Facebook</a> |
+        <a href="#">Facebook</a> |
 
-    <a href="#">Instagram</a> |
+        <a href="#">Instagram</a> |
 
-    <a href="#">LinkedIn</a>
+        <a href="#">LinkedIn</a>
 
-  </footer>
+    </footer>
     <script src="{{url_for('static',filename='js/script.js')}}"></script>
 </body>
 

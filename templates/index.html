@@ -15,31 +15,28 @@
     <p>Learn Practice Get Placed</p>
     <nav>
       <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/courses">Courses</a>
-            <a href="/trainers">Trainers</a>
-            {% if session.get('user_email') %}
-            <a href="/logout">Logout</a>
-            {% else %}
-            <a href="/register">Register</a>
-            <a href="/login">Login</a>
-            {% endif %}
-            <a href="/contact">Contact</a
+      <a href="/about">About</a>
+      <a href="/courses">Courses</a>
+      <a href="/trainers">Trainers</a>
+      {% if session.get('user_email') %}
+      <a href="/tasks">My Tasks</a>
+      <a href="/logout">Logout</a>
+      {% else %}
+      <a href="/register">Register</a>
+      <a href="/login">Login</a>
+      {% endif %}
+      <a href="/contact">Contact</a>
     </nav>
   </header>
   <main>
     <section>
-      <h2 id="welcome">Welcome to NRIIT Learning Management System</h2>
+      <h2>Welcome to NRIIT Learning Management System</h2>
       <p>
         The NRIIT Management System helps students explore courses, resgister online, learn from experienced trainers and
         track their learning journey.
       </p>
-      <p id="message">Learning never stops</p>
-      <img src="static/image/banner.jpg" alt="LMS Banner" width="800" class="banner">
-      <br><br>
-      <button onclick="showmessage()">Click Me</button>
-      <button onclick="changeHeading()">Change Heading</button>
-      <button id="btnGreeting">Welcome</button>
+      <p>Learning never stops</p>
+      <img src="{{ url_for('static', filename='image/banner.jpg') }}" alt="LMS Banner" width="800" class="banner">
     </section>
     <section>
       <h2>Why choose NRIIT?</h2>
@@ -51,10 +48,14 @@
     </section>
     <section>
       <h2>Popular Courses</h2>
-      <article>
-        <h3>Python FullStack</h3>
-        <p>Learn HTML, CSS, JavScript,SQL and Flask</p>
-      </article>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span id="prevPopularCourseBtn" style="cursor: pointer; font-size: 32px; user-select: none;">&#10094;</span>
+        <article>
+          <h3 id="popularCourseName">Python FullStack</h3>
+          <p id="popularCourseDesc">Learn HTML, CSS, JavaScript, SQL and Flask</p>
+        </article>
+        <span id="nextPopularCourseBtn" style="cursor: pointer; font-size: 32px; user-select: none;">&#10095;</span>
+      </div>
     </section>
   </main>
   <footer>
